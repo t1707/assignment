@@ -1,3 +1,13 @@
+/**
+  * To do this in one pass, take two pointer, one from start and one from end.
+  * we skip character which aren't letterOrdigit and if our pointers find any
+  * character which might result in notAPalindrome situation then we simply
+  * return fasle.
+  * 
+  * Time complexity: O(n)
+  * Space complexity: O(1)
+*/
+
 import java.util.*;
 
 public class Que01 {
