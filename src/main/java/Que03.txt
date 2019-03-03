@@ -1,0 +1,15 @@
+We create an objectPool of 4 objects using the standard definition of ConcurrentLinkedQueue.
+ObjectPool defines borrowObject() and returnObject() functions and make createObject() as abstract so that implementing
+class can define as per the requirements.
+We initialize are objectPool with numObjects(=4).
+
+Later ExportingTask class implement runnable to keep track of objects(of objectPool) and threads using those objects.
+At last, we create a testClass which implements the createObject()(a sequence of Integers).
+
+
+Limitations
+We have initialize our class with some objects but when new object creation request comes, we have to face the same
+problem of initializing new objects which might be heavy for general cases.
+We can fix a max limit on the numObjects and put a validator to remove the unused objects from the pool.
+We can use a similar concept to LRU cache to keep the recently used object to front of the queue and putting unused
+objects at the back of the queue and removing those if crossed the threshold.

@@ -1,0 +1,19 @@
+What is a distributed system?
+
+A distributed system is a network that consists of autonomous computers/nodes that are physically separate but
+linked together using the network or any distribution middleware. All the nodes can share data in between and optimize
+the computing time.
+
+What kind of difficulties commonly found when building a distributed system?
+1. Security: It is difficult to provide adequate security in distributed systems because
+the nodes as well as the connections need to be secured.
+2. Heterogeneity: Heterogeneity of networks, computer hardware, OS, languages etc.
+3. Concurrency: multiple nodes can try to access same data at the same time.
+4. Consistency: failure of some node might result in invalid results.
+
+How do you solve these difficulties?
+
+1. Using cryptography, providing access policies(access control models) and/or using firewalls.
+2. Using middlewares like redHat or open source like Apache.
+3. Using concurrency practices(using locks or synchronization) can help concurrency failures.
+4. Using data replication can resolve consistency issue.
